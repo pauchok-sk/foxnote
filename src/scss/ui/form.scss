@@ -1,0 +1,76 @@
+.input-control {
+}
+.label-control {
+  font-size: 20px;
+  display: block;
+  @include laptop-min {
+    font-size: 18px;
+  }
+
+  span {
+    color: var(--primary);
+  }
+
+  small {
+    font-size: inherit;
+    line-height: inherit;
+    opacity: 0.5;
+  }
+}
+.input {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  height: 35px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+
+  font-size: 16px;
+
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    border-color: var(--primary);
+  }
+}
+
+.input-file {
+  display: none;
+}
+.form-btn {
+  @include  flex-center;
+  padding: 20px;
+  gap: 15px;
+  cursor: pointer;
+  width: fit-content;
+
+  font-size: 20px;
+
+  transition: background-color 0.2s ease;
+
+  @include hover {
+    background-color: rgba(241, 130, 10, 0.1);
+  }
+  @include tablet {
+    font-size: 18px;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    color: var(--primary);
+  }
+}
+.form-policy {
+  font-size: 16px;
+  color: #606060;
+  margin: 0;
+
+  a {
+    text-decoration: underline;
+    @include hover {
+      color: var(--primary);
+    }
+  }
+}
