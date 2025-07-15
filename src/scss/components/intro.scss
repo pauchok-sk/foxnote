@@ -1,0 +1,211 @@
+.intro {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 207px 0px 110px 0px;
+  background-color: #1a2027;
+  background-image: radial-gradient(
+    73.93% 63.16% at 16.9% 96.53%,
+    rgba(241, 130, 10, 0.2) 0%,
+    rgba(241, 130, 10, 0) 100%
+  );
+  color: white;
+  z-index: 1;
+  @include laptop-middle {
+    padding: 145px 0px 100px 0px;
+  }
+  @include laptop-min {
+    padding-bottom: 70px;
+  }
+  @include tablet {
+    padding: 100px 0px 40px 0px;
+  }
+  &::before {
+    position: absolute;
+    left: 450px;
+    top: -265px;
+    content: "";
+    width: 835px;
+    height: 835px;
+    opacity: 0.1;
+    filter: blur(300px);
+    background-color: #81f9e5;
+    border-radius: 50%;
+    z-index: -2;
+  }
+  &__circle {
+    position: absolute;
+    display: block;
+    width: 675px;
+    top: 200px;
+    right: -140px;
+    z-index: -1;
+    @include desktop {
+      width: 500px;
+      top: 50px;
+    }
+    @include laptop-min {
+      width: 350px;
+      right: -60px;
+    }
+    @include tablet {
+      width: 300px;
+      top: 200px;
+    }
+  }
+  &__rect {
+    position: absolute;
+    display: block;
+    width: 590px;
+    left: 200px;
+    filter: blur(5px);
+    bottom: -115px;
+    z-index: -1;
+    @include desktop {
+      width: 450px;
+    }
+    @include laptop-min {
+      width: 300px;
+      left: 100px;
+      bottom: -50px;
+    }
+    @include tablet {
+      left: 30px;
+    }
+  }
+  &__container {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &._bottom {
+      text-align: right;
+    }
+  }
+  &__text-item {
+    font-weight: 500;
+    font-size: 80px;
+    text-transform: uppercase;
+    @include desktop {
+      font-size: 50px;
+    }
+    @include laptop-min {
+      font-size: 42px;
+    }
+    @include tablet {
+      font-size: 38px;
+    }
+  }
+  &__text-primary {
+    font-family: "NauryzRedKeds", sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    text-transform: uppercase;
+    color: var(--primary);
+    @include desktop {
+      font-size: 42px;
+    }
+    @include laptop-min {
+      font-size: 38px;
+    }
+    @include tablet {
+      font-size: 32px;
+    }
+  }
+  &__play {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 10px;
+    width: fit-content;
+
+    text-align: center;
+    font-size: 32px;
+
+    @include desktop {
+      font-size: 28px;
+    }
+    @include laptop-min {
+      font-size: 24px;
+    }
+    @include tablet {
+      position: static;
+      transform: translate(0, 0);
+      margin: 40px auto 0px auto;
+    }
+  }
+  &__play-circle {
+    @include flex-center;
+    width: 255px;
+    height: 255px;
+    border-radius: 50%;
+    background-color: white;
+
+    color: var(--dark);
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+
+    @include hover {
+      color: white;
+      background-color: var(--primary);
+    }
+    @include desktop {
+      width: 180px;
+      height: 180px;
+    }
+    @include laptop-min {
+      width: 140px;
+      height: 140px;
+    }
+
+    svg {
+      width: 80px;
+      height: 80px;
+
+      @include desktop {
+        width: 60px;
+        height: 60px;
+      }
+      @include laptop-min {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: auto;
+    padding-top: 40px;
+    @include tablet {
+      flex-direction: column-reverse;
+    }
+  }
+  &__footer-btn {
+    background-color: white !important;
+    color: black !important;
+    transition: border-radius 0.2s ease;
+    @include hover {
+      border-radius: 50px 0;
+    }
+    @include tablet {
+      width: 100%;
+    }
+  }
+}

@@ -28,4 +28,14 @@
   @include tablet {
     font-size: 18px;
   }
+
+  &._white {
+    background-color: white;
+    color: black;
+
+    @include hover {
+      color: white;
+      background-color: var(--primary);
+    }
+  }
 }

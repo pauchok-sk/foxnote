@@ -1,0 +1,10 @@
+.parallax-container {
+  &._refund {
+    .parallax-item {
+      transition: transform 0.5s linear;
+    }
+  }
+}
+.parallax-item {
+  transition: transform 0.2s linear;
+}
