@@ -6,8 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20250715234649">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250715234649">
+	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20250716181426">
+	<link rel="stylesheet" href="./files/aos/aos.min.css?_v=20250716181426">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250716181426">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -23,7 +24,7 @@
 					<li><a href="#">Кейсы</a></li>
 					<li><a href="#">О нас</a></li>
 					<li><a href="#">Контакты</a></li>
-					<li><a href="#">Заполнить бриф</a></li>
+					<li><a href="#" class="_active">Заполнить бриф</a></li>
 				</ul>
 				<a href="tel:+79995555555" class="header__tel">+7 (999) 555-55-55</a>
 				<button data-modal-btn="modal-price" class="btn-reset header__btn">Рассчитать стоимость</button>
@@ -68,7 +69,7 @@
 			<img src="img/intro-circle.png" alt="image" class="parallax-item intro__circle">
 			<img src="img/intro-rect.png" alt="image" class="parallax-item intro__rect">
 			<div class="container intro__container">
-				<div class="intro__text">
+				<div class="intro__text" data-aos="fade-right">
 					<div class="intro__text-item">Мы создаем</div>
 					<div class="intro__text-primary">события,</div>
 				</div>
@@ -84,11 +85,154 @@
 					<button data-modal-btn="modal-connect" class="btn-s _white intro__footer-btn">
 						Обсудить проект
 					</button>
-					<div class="intro__text _bottom">
+					<div class="intro__text _bottom" data-aos="fade-left">
 						<div class="intro__text-item">которые</div>
 						<div class="intro__text-primary">работают</div>
 						<div class="intro__text-item">на ваш бизнес.</div>
 					</div>
+				</div>
+			</div>
+			<img src="img/scroll-down.gif" alt="icon" class="intro__down-icon">
+		</section>
+
+		<section class="s-cases sect-m">
+			<div class="container">
+				<h2 class="s-title _center">Кейсы</h2>
+				<div class="s-cases__grid aos-container">
+					<a data-aos="fade-up" href="#" class="card-case" style="
+          background: url(&quot;img/case-2.jpg&quot;) 0 0 / cover no-repeat;
+        ">
+						<div class="card-case__body">
+							<div class="card-case__circle">
+								<img src="img/case-logo.jpg" alt="logo" />
+							</div>
+							<h5 class="card-case__title">Открытие сезона гольф клуба</h5>
+							<div class="card-case__type">Корпоративные игры</div>
+						</div>
+					</a>
+					<a href="#" data-aos="fade-up" class="card-case" style="background: url(&quot;img/case.jpg&quot;) 0 0 / cover no-repeat">
+						<div class="card-case__body">
+							<div class="card-case__circle">
+								<img src="img/case-logo.jpg" alt="logo" />
+							</div>
+							<h5 class="card-case__title">Открытие сезона гольф клуба</h5>
+							<div class="card-case__type">Корпоративные игры</div>
+						</div>
+					</a>
+					<a href="#" data-aos="fade-up" class="card-case" style="
+          background: url(&quot;img/case-2.jpg&quot;) 0 0 / cover no-repeat;
+        ">
+						<div class="card-case__body">
+							<div class="card-case__circle">
+								<img src="img/case-logo.jpg" alt="logo" />
+							</div>
+							<h5 class="card-case__title">Открытие сезона гольф клуба</h5>
+							<div class="card-case__type">Корпоративные игры</div>
+						</div>
+					</a>
+					<a data-aos="fade-up" href="#" class="card-case" style="
+          background: url(&quot;img/case-2.jpg&quot;) 0 0 / cover no-repeat;
+        ">
+						<div class="card-case__body">
+							<div class="card-case__circle">
+								<img src="img/case-logo.jpg" alt="logo" />
+							</div>
+							<h5 class="card-case__title">Открытие сезона гольф клуба</h5>
+							<div class="card-case__type">Корпоративные игры</div>
+						</div>
+					</a>
+					<a href="#" data-aos="fade-up" class="card-case" style="background: url(&quot;img/case.jpg&quot;) 0 0 / cover no-repeat">
+						<div class="card-case__body">
+							<div class="card-case__circle">
+								<img src="img/case-logo.jpg" alt="logo" />
+							</div>
+							<h5 class="card-case__title">Открытие сезона гольф клуба</h5>
+							<div class="card-case__type">Корпоративные игры</div>
+						</div>
+					</a>
+					<a href="#" data-aos="fade-up" class="card-case" style="
+          background: url(&quot;img/case-2.jpg&quot;) 0 0 / cover no-repeat;
+        ">
+						<div class="card-case__body">
+							<div class="card-case__circle">
+								<img src="img/case-logo.jpg" alt="logo" />
+							</div>
+							<h5 class="card-case__title">Открытие сезона гольф клуба</h5>
+							<div class="card-case__type">Корпоративные игры</div>
+						</div>
+					</a>
+					<a data-aos="fade-up" href="#" class="card-case" style="
+          background: url(&quot;img/case-2.jpg&quot;) 0 0 / cover no-repeat;
+        ">
+						<div class="card-case__body">
+							<div class="card-case__circle">
+								<img src="img/case-logo.jpg" alt="logo" />
+							</div>
+							<h5 class="card-case__title">Открытие сезона гольф клуба</h5>
+							<div class="card-case__type">Корпоративные игры</div>
+						</div>
+					</a>
+					<a href="#" data-aos="fade-up" class="card-case" style="background: url(&quot;img/case.jpg&quot;) 0 0 / cover no-repeat">
+						<div class="card-case__body">
+							<div class="card-case__circle">
+								<img src="img/case-logo.jpg" alt="logo" />
+							</div>
+							<h5 class="card-case__title">Открытие сезона гольф клуба</h5>
+							<div class="card-case__type">Корпоративные игры</div>
+						</div>
+					</a>
+					<a href="#" data-aos="fade-up" class="card-case" style="
+          background: url(&quot;img/case-2.jpg&quot;) 0 0 / cover no-repeat;
+        ">
+						<div class="card-case__body">
+							<div class="card-case__circle">
+								<img src="img/case-logo.jpg" alt="logo" />
+							</div>
+							<h5 class="card-case__title">Открытие сезона гольф клуба</h5>
+							<div class="card-case__type">Корпоративные игры</div>
+						</div>
+					</a>
+				</div>
+				<a href="#" class="btn-s s-cases__btn">Все кейсы</a>
+			</div>
+		</section>
+
+		<section class="s-partners sect-p s-gray">
+			<div class="container">
+				<h2 class="s-title _center">
+					Мы гордимся нашей работой с лучшими компаниями
+				</h2>
+				<div class="s-partners__wrapper">
+					<a href="#" class="s-partners__item">
+						<img src="img/partner.jpg" alt="logo" />
+					</a>
+					<a href="#" class="s-partners__item">
+						<img src="img/partner.jpg" alt="logo" />
+					</a>
+					<a href="#" class="s-partners__item">
+						<img src="img/partner.jpg" alt="logo" />
+					</a>
+					<a href="#" class="s-partners__item">
+						<img src="img/partner.jpg" alt="logo" />
+					</a>
+					<a href="#" class="s-partners__item">
+						<img src="img/partner.jpg" alt="logo" />
+					</a>
+					<a href="#" class="s-partners__item">
+						<img src="img/partner.jpg" alt="logo" />
+					</a>
+					<a href="#" class="s-partners__item">
+						<img src="img/partner.jpg" alt="logo" />
+					</a>
+					<a href="#" class="s-partners__item">
+						<img src="img/partner.jpg" alt="logo" />
+					</a>
+					<a href="#" class="s-partners__item">
+						<img src="img/partner.jpg" alt="logo" />
+					</a>
+					<a href="#" class="s-partners__item">
+						<img src="img/partner.jpg" alt="logo" />
+					</a>
 				</div>
 			</div>
 		</section>
@@ -248,8 +392,9 @@
 		</div>
 	</footer>
 
-	<script src="./files/fancybox/fancybox.min.js?_v=20250715234649"></script>
-	<script src="js/app.min.js?_v=20250715234649"></script>
+	<script src="./files/fancybox/fancybox.min.js?_v=20250716181426"></script>
+	<script src="./files/aos/aos.min.js?_v=20250716181426"></script>
+	<script src="js/app.min.js?_v=20250716181426"></script>
 </body>
 
 </html>

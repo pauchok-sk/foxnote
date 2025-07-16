@@ -1,5 +1,16 @@
 (() => {
     "use strict";
+    function aosGradationCases() {
+        const aosContiners = document.querySelectorAll(".aos-container");
+        if (aosContiners.length && window.matchMedia("(min-width: 576px)").matches) aosContiners.forEach(container => {
+            const aosItems = container.querySelectorAll("[data-aos]");
+            let delay = 0;
+            aosItems.forEach((item, index) => {
+                item.setAttribute("data-aos-delay", delay);
+                if (window.matchMedia("(max-width: 991px)").matches) if (delay === 100) delay = 0; else delay += 100; else if (delay === 200) delay = 0; else delay += 100;
+            });
+        });
+    }
     function burger() {
         const burgerOpen = document.querySelector("#burger-open");
         const burgerClose = document.querySelector("#burger-close");
@@ -327,5 +338,7 @@
     labelFile();
     modal();
     parallax();
+    aosGradationCases();
     Fancybox.bind("[data-fancybox]");
+    AOS.init();
 })();

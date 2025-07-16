@@ -1,0 +1,92 @@
+.card-case {
+  position: relative;
+  @include flex-center;
+  aspect-ratio: 1/1;
+  z-index: 1;
+
+  @include hover {
+    &::before {
+      opacity: 1 !important;
+    }
+    .card-case__body {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0.8) 100%
+    );
+    opacity: 0;
+    z-index: -1;
+
+    transition: opacity 0.2s ease;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    padding: 15px;
+    transition:
+      opacity 0.2s ease 0.2s,
+      transform 0.2s ease 0.2s;
+    @include laptop-min {
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    }
+  }
+  &__circle {
+    @include flex-center;
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: white;
+    margin-bottom: 30px;
+
+    @include laptop-middle {
+      width: 140px;
+      height: 140px;
+    }
+    @include tablet {
+      margin-bottom: 20px;
+      width: 120px;
+      height: 120px;
+    }
+
+    img {
+      display: block;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    text-transform: uppercase;
+    margin: 0px 0px 10px 0px;
+    @include laptop {
+      font-size: 24px;
+    }
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+  &__type {
+    font-size: 24px;
+    @include laptop {
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+}

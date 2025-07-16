@@ -208,4 +208,14 @@
       width: 100%;
     }
   }
+  &__down-icon {
+    position: absolute;
+    width: 40px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include laptop-min {
+      display: none;
+    }
+  }
 }

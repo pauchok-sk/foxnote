@@ -1,0 +1,48 @@
+.s-partners {
+  overflow: hidden;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 25px;
+    @include tablet {
+      row-gap: 20px
+    }
+  }
+  &__item {
+    @include flex-center;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #e8e8e9;
+    flex-shrink: 0;
+    margin: 0 -25px;
+    transition: margin 0.5s ease;
+    @include hover {
+      margin: 0 30px;
+    }
+    @include laptop {
+      width: 290px;
+      height: 290px;
+    }
+    @include laptop-middle {
+      width: 240px;
+      height: 240px;
+      margin: 0 -15px;
+      @include hover {
+        margin: 0 10px;
+      }
+    }
+    @include laptop-min {
+      width: 160px;
+      height: 160px;
+    }
+
+    img {
+      @include laptop-middle {
+        max-width: 70%;
+      }
+    }
+  }
+}

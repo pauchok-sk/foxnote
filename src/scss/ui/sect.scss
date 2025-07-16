@@ -1,0 +1,28 @@
+.sect-m {
+  margin: 120px 0px;
+  @include laptop-middle {
+    margin: 100px 0px;
+  }
+  @include laptop-min {
+    margin: 80px 0px;
+  }
+  @include tablet {
+    margin: 65px 0px;
+  }
+}
+.sect-p {
+  padding: 120px 0px;
+  @include laptop-middle {
+    padding: 100px 0px;
+  }
+  @include laptop-min {
+    padding: 80px 0px;
+  }
+  @include tablet {
+    padding: 65px 0px;
+  }
+}
+
+.s-gray {
+  background-color: var(--gray);
+}
