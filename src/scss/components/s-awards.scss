@@ -1,0 +1,47 @@
+.s-awards {
+  &__wrapper {
+    display: flex;
+    align-items: start;
+    gap: 60px;
+  }
+  &__title {
+    position: sticky;
+    top: 0;
+    width: 400px;
+    flex-shrink: 0;
+    margin-bottom: 0 !important;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 1;
+  }
+  &__item {
+    display: flex;
+    align-items: start;
+    gap: 50px;
+    min-height: 140px;
+  }
+  &__item-num {
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 100%;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-family: "NauryzRedKeds", sans-serif;
+  }
+  &__item-body {
+    flex: 1;
+  }
+  &__item-title {
+    font-weight: 600;
+    font-size: 28px;
+    margin: 0px 0px 10px 0px;
+  }
+  &__item-content {
+    font-size: 18px;
+    color: #606060;
+    margin: 0;
+  }
+}

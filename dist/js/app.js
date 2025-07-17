@@ -47,6 +47,23 @@
             updateHeightBurger();
         }
     }
+    function headerScroll() {
+        const header = document.querySelector(".header");
+        if (header) {
+            let lastScrollTop = 0;
+            window.addEventListener("scroll", () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop && scrollTop >= header.clientHeight) {
+                    header.classList.add("_hide");
+                    header.classList.remove("_shadow");
+                } else {
+                    header.classList.remove("_hide");
+                    header.classList.add("_shadow");
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            });
+        }
+    }
     function labelFile() {
         const inputs = document.querySelectorAll(".input-file");
         if (inputs.length) inputs.forEach(input => {
@@ -139,6 +156,25 @@
                 }
             });
         });
+    }
+    function slides() {
+        const teamSlider = document.querySelector(".s-team__slider");
+        if (teamSlider) {
+            new Swiper(teamSlider, {
+                slidesPerView: "auto",
+                spaceBetween: 20,
+                speed: 800,
+                autolay: {
+                    delay: 3500
+                },
+                breakpoints: {
+                    992: {
+                        slidesPerView: "auto",
+                        spaceBetween: 40
+                    }
+                }
+            });
+        }
     }
     function spoller() {
         const spollersArray = document.querySelectorAll("[data-spollers]");
@@ -336,6 +372,8 @@
     modal();
     parallax();
     aosGradationCases();
+    slides();
+    headerScroll();
     Fancybox.bind("[data-fancybox]");
     AOS.init();
 })();

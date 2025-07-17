@@ -16,6 +16,8 @@
 @import "./ui/title";
 @import "./ui/card-case";
 @import "./ui/card-service";
+@import "./ui/card-spec";
+@import "./ui/custom-cursor";
 
 // widgets
 @import "./widgets/burger";
@@ -28,5 +30,7 @@
 @import "./components/s-cases";
 @import "./components/s-partners";
 @import "./components/s-services";
+@import "./components/s-team";
+@import "./components/s-awards";
 
 @import "./components/footer";

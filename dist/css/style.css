@@ -476,6 +476,53 @@ body {
   text-align: center;
   transition: background-color .2s ease
 }
+.card-spec {
+  position: relative;
+  overflow: hidden;
+  padding: 25px;
+  display: flex;
+  align-items: end;
+  width: 360px!important;
+  min-height: 480px;
+  background-color: #e8e9e9;
+  box-sizing: border-box;
+  z-index: 1
+}
+.card-spec::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: linear-gradient(180deg,rgba(255,255,255,0) 70%,rgba(245,246,246,.55) 79.81%,#e8e9e9 100%);
+  z-index: -1
+}
+.card-spec__img {
+  position: absolute;
+  width: 100%;
+  display: block;
+  height: auto;
+  bottom: 0;
+  left: 0;
+  z-index: -2
+}
+.card-spec__logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  z-index: -3
+}
+.card-spec__title {
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0 0 10px 0
+}
+.card-spec__status {
+  font-size: 18px;
+  color: #606060
+}
+.custom-cursor {
+  cursor: url(../img/cursor.svg),default
+}
 .burger-overlay {
   position: fixed;
   inset: 0;
@@ -693,7 +740,17 @@ body {
   padding: 22px 0;
   background-color: #fff;
   top: 0;
-  z-index: 100
+  z-index: 100;
+  transition: -webkit-transform .4s ease;
+  transition: transform .4s ease;
+  transition: transform .4s ease,-webkit-transform .4s ease
+}
+.header._hide {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%)
+}
+.header._shadow {
+  box-shadow: 0 2px 15px 1px rgba(0,0,0,.09)
 }
 .header._fixed {
   position: fixed;
@@ -914,6 +971,57 @@ body {
   flex-wrap: wrap;
   gap: 130px
 }
+.s-team {
+  overflow: hidden
+}
+.s-team__slider {
+  overflow: visible!important
+}
+.s-awards__wrapper {
+  display: flex;
+  align-items: start;
+  gap: 60px
+}
+.s-awards__title {
+  position: sticky;
+  top: 0;
+  width: 400px;
+  flex-shrink: 0;
+  margin-bottom: 0!important
+}
+.s-awards__items {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1
+}
+.s-awards__item {
+  display: flex;
+  align-items: start;
+  gap: 50px;
+  min-height: 140px
+}
+.s-awards__item-num {
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 100%;
+  color: var(--primary);
+  text-transform: uppercase;
+  font-family: NauryzRedKeds,sans-serif
+}
+.s-awards__item-body {
+  flex: 1
+}
+.s-awards__item-title {
+  font-weight: 600;
+  font-size: 28px;
+  margin: 0 0 10px 0
+}
+.s-awards__item-content {
+  font-size: 18px;
+  color: #606060;
+  margin: 0
+}
 @media (min-width:768px)and (any-hover:hover) {
   .card-service:hover .card-service__img {
     -webkit-transform: translateY(-50px);
@@ -1116,6 +1224,10 @@ body {
     transition: opacity .2s ease,-webkit-transform .2s ease;
     transition: opacity .2s ease,transform .2s ease;
     transition: opacity .2s ease,transform .2s ease,-webkit-transform .2s ease
+  }
+  .card-spec {
+    width: 320px!important;
+    height: 420px!important
   }
   .modal__window {
     border-radius: 30px 30px 0 0;
