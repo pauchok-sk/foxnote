@@ -1,0 +1,7 @@
+.s-services {
+  &__grid {
+    @include flex-center;
+    flex-wrap: wrap;
+    gap: 130px;
+  }
+}

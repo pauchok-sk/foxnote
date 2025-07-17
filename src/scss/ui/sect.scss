@@ -26,3 +26,21 @@
 .s-gray {
   background-color: var(--gray);
 }
+
+.s-head {
+  @include flex-between;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  margin-bottom: 60px;
+  @include laptop-min {
+    margin-bottom: 40px;
+  }
+  @include tablet {
+    margin-bottom: 30px;
+  }
+
+  .s-title {
+    margin-bottom: 0 !important;
+  }
+}

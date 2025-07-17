@@ -3,7 +3,6 @@
   font-size: 60px;
   line-height: 110%;
   text-transform: uppercase;
-  text-align: center;
 
   margin: 0px 0px 60px 0px;
   @include laptop-middle {
@@ -16,6 +15,10 @@
   @include tablet {
     margin-bottom: 30px;
     font-size: 32px;
+  }
+
+  span {
+    color: var(--primary);
   }
 
   &._center {
