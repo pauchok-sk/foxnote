@@ -1007,6 +1007,7 @@ body {
   line-height: 100%;
   color: var(--primary);
   text-transform: uppercase;
+  flex: 0 1 270px;
   font-family: NauryzRedKeds,sans-serif
 }
 .s-awards__item-body {
@@ -1127,6 +1128,16 @@ body {
     width: 290px;
     height: 290px
   }
+  .s-awards__wrapper {
+    gap: 30px
+  }
+  .s-awards__item {
+    gap: 30px
+  }
+  .s-awards__item-num {
+    font-size: 100px;
+    flex-basis: 250px
+  }
 }
 @media (max-width:1199px) {
   .sect-m {
@@ -1186,6 +1197,16 @@ body {
   }
   .s-services__grid {
     gap: 30px
+  }
+  .s-awards__title {
+    width: 300px
+  }
+  .s-awards__item-num {
+    font-size: 82px;
+    flex-basis: 210px
+  }
+  .s-awards__item-title {
+    font-size: 22px
   }
 }
 @media (max-width:1199px)and (any-hover:hover) {
@@ -1305,6 +1326,20 @@ body {
     width: 160px;
     height: 160px
   }
+  .s-awards__wrapper {
+    flex-wrap: wrap;
+    gap: 40px
+  }
+  .s-awards__title {
+    position: static;
+    width: 100%
+  }
+  .s-awards__title br {
+    display: none
+  }
+  .s-awards__items {
+    gap: 30px
+  }
 }
 @media (max-width:767px) {
   .btn-s {
@@ -1323,7 +1358,6 @@ body {
     margin-bottom: 30px
   }
   .s-title {
-    margin-bottom: 30px;
     font-size: 32px
   }
   .card-case__circle {
@@ -1396,6 +1430,19 @@ body {
     row-gap: 20px;
     max-width: 450px
   }
+  .s-awards__item {
+    gap: 20px
+  }
+  .s-awards__item-num {
+    font-size: 64px;
+    flex-basis: 155px
+  }
+  .s-awards__item-title {
+    font-size: 20px
+  }
+  .s-awards__item-content {
+    font-size: 16px
+  }
 }
 @media (max-width:767px)and (any-hover:hover) {
   .card-service:hover .card-service__btn {
@@ -1415,6 +1462,14 @@ body {
     grid-template-columns: 1fr
   }
   .s-cases__btn {
+    width: 100%
+  }
+  .s-awards__item {
+    flex-wrap: wrap;
+    gap: 15px
+  }
+  .s-awards__item-num {
+    flex: none;
     width: 100%
   }
 }

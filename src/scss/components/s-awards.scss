@@ -3,6 +3,13 @@
     display: flex;
     align-items: start;
     gap: 60px;
+    @include laptop {
+      gap: 30px;
+    }
+    @include laptop-min {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
   }
   &__title {
     position: sticky;
@@ -10,18 +17,42 @@
     width: 400px;
     flex-shrink: 0;
     margin-bottom: 0 !important;
+
+    @include laptop-middle {
+      width: 300px;
+    }
+    @include laptop-min {
+      position: static;
+      width: 100%;
+      br {
+        display: none;
+      }
+    }
   }
   &__items {
     display: flex;
     flex-direction: column;
     gap: 40px;
     flex: 1;
+    @include laptop-min {
+      gap: 30px;
+    }
   }
   &__item {
     display: flex;
     align-items: start;
     gap: 50px;
     min-height: 140px;
+    @include laptop {
+      gap: 30px;
+    }
+    @include tablet {
+      gap: 20px;
+    }
+    @include tablet-min {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
   }
   &__item-num {
     font-weight: 700;
@@ -29,7 +60,24 @@
     line-height: 100%;
     color: var(--primary);
     text-transform: uppercase;
+    flex: 0 1 270px;
     font-family: "NauryzRedKeds", sans-serif;
+    @include laptop {
+      font-size: 100px;
+      flex-basis: 250px;
+    }
+    @include laptop-middle {
+      font-size: 82px;
+      flex-basis: 210px;
+    }
+    @include tablet {
+      font-size: 64px;
+      flex-basis: 155px;
+    }
+    @include tablet-min {
+      flex: none;
+      width: 100%;
+    }
   }
   &__item-body {
     flex: 1;
@@ -38,10 +86,19 @@
     font-weight: 600;
     font-size: 28px;
     margin: 0px 0px 10px 0px;
+    @include laptop-middle {
+      font-size: 22px;
+    }
+    @include tablet {
+      font-size: 20px;
+    }
   }
   &__item-content {
     font-size: 18px;
     color: #606060;
     margin: 0;
+    @include tablet {
+      font-size: 16px;
+    }
   }
 }
