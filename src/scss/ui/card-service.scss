@@ -4,16 +4,27 @@
   height: auto !important;
   width: 320px;
 
-  @include hover {
-    .card-service {
-      &__img {
-        transform: translateY(-50px);
+  @media (min-width: 768px) {
+    @include hover {
+      .card-service {
+        &__img {
+          transform: translateY(-50px);
+        }
+        &__shadow {
+          opacity: 0.2;
+        }
+        &__btn {
+          background-color: var(--primary);
+        }
       }
-      &__shadow {
-        opacity: 0.2;
-      }
-      &__btn {
-        background-color: var(--primary);
+    }
+  }
+  @include tablet {
+    @include hover {
+      .card-service {
+        &__btn {
+          background-color: var(--primary);
+        }
       }
     }
   }
@@ -30,17 +41,21 @@
     position: absolute;
     top: 0;
     z-index: 1;
-    transition: transform .2s linear;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.2s linear;
   }
   &__shadow {
     position: absolute;
     width: 100%;
     bottom: 0;
+    object-fit: contain;
     left: 0;
 
-    transition: opacity .2s linear;
+    transition: opacity 0.2s linear;
   }
   &__btn {
+    @include flex-center;
     width: 100%;
     padding: 20px 50px;
     border-radius: 50px 0;
@@ -53,6 +68,6 @@
     font-size: 24px;
     text-align: center;
 
-    transition: background-color .2s ease;
+    transition: background-color 0.2s ease;
   }
 }

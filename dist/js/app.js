@@ -138,9 +138,6 @@
                     animationId = requestAnimationFrame(smoothUpdate);
                 }
             });
-            container.addEventListener("DOMNodeRemoved", () => {
-                if (animationId) cancelAnimationFrame(animationId);
-            });
         });
     }
     function spoller() {

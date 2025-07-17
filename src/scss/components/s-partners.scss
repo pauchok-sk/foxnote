@@ -5,8 +5,30 @@
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 25px;
+    @media (max-width: 1599px) {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    @include laptop {
+      max-width: 1100px;
+    }
+    @media (max-width: 1099px) {
+      max-width: 650px;
+    }
+    @include laptop-min {
+      max-width: 700px;
+    }
     @include tablet {
-      row-gap: 20px
+      row-gap: 20px;
+      max-width: 450px;
+    }
+    @include mobile {
+      flex-wrap: nowrap;
+      overflow-y: auto;
+      justify-content: start;
+      max-width: none;
+      margin: 0 -15px;
+      padding: 0 15px;
     }
   }
   &__item {

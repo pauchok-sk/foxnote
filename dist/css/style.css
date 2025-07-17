@@ -444,6 +444,9 @@ body {
   position: absolute;
   top: 0;
   z-index: 1;
+  max-height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
   transition: -webkit-transform .2s linear;
   transition: transform .2s linear;
   transition: transform .2s linear,-webkit-transform .2s linear
@@ -452,10 +455,15 @@ body {
   position: absolute;
   width: 100%;
   bottom: 0;
+  -o-object-fit: contain;
+  object-fit: contain;
   left: 0;
   transition: opacity .2s linear
 }
 .card-service__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   padding: 20px 50px;
   border-radius: 50px 0;
@@ -902,10 +910,44 @@ body {
 }
 .s-services__grid {
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 130px
+}
+@media (min-width:768px)and (any-hover:hover) {
+  .card-service:hover .card-service__img {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px)
+  }
+  .card-service:hover .card-service__shadow {
+    opacity: .2
+  }
+  .card-service:hover .card-service__btn {
+    background-color: var(--primary)
+  }
+}
+@media (min-width:768px)and (hover:none) {
+  .card-service:active .card-service__img {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px)
+  }
+  .card-service:active .card-service__shadow {
+    opacity: .2
+  }
+  .card-service:active .card-service__btn {
+    background-color: var(--primary)
+  }
+}
+@media (max-width:1699px) {
+  .s-services__grid {
+    gap: 50px
+  }
+}
+@media (max-width:1599px) {
+  .s-partners__wrapper {
+    max-width: 1300px;
+    margin: 0 auto
+  }
 }
 @media (max-width:1539px) {
   .header__list {
@@ -970,6 +1012,9 @@ body {
     font-size: 18px;
     padding: 15px
   }
+  .s-partners__wrapper {
+    max-width: 1100px
+  }
   .s-partners__item {
     width: 290px;
     height: 290px
@@ -1031,6 +1076,9 @@ body {
   .s-partners__item img {
     max-width: 70%
   }
+  .s-services__grid {
+    gap: 30px
+  }
 }
 @media (max-width:1199px)and (any-hover:hover) {
   .s-partners__item:hover {
@@ -1040,6 +1088,11 @@ body {
 @media (max-width:1199px)and (hover:none) {
   .s-partners__item:active {
     margin: 0 10px
+  }
+}
+@media (max-width:1099px) {
+  .s-partners__wrapper {
+    max-width: 650px
   }
 }
 @media (max-width:991px) {
@@ -1133,6 +1186,9 @@ body {
   .s-cases__btn {
     margin-top: 40px
   }
+  .s-partners__wrapper {
+    max-width: 700px
+  }
   .s-partners__item {
     width: 160px;
     height: 160px
@@ -1225,7 +1281,18 @@ body {
     margin-top: 30px
   }
   .s-partners__wrapper {
-    row-gap: 20px
+    row-gap: 20px;
+    max-width: 450px
+  }
+}
+@media (max-width:767px)and (any-hover:hover) {
+  .card-service:hover .card-service__btn {
+    background-color: var(--primary)
+  }
+}
+@media (max-width:767px)and (hover:none) {
+  .card-service:active .card-service__btn {
+    background-color: var(--primary)
   }
 }
 @media (max-width:575px) {
@@ -1237,6 +1304,16 @@ body {
   }
   .s-cases__btn {
     width: 100%
+  }
+}
+@media (max-width:480px) {
+  .s-partners__wrapper {
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    justify-content: start;
+    max-width: none;
+    margin: 0 -15px;
+    padding: 0 15px
   }
 }
 @media (any-hover:hover) {
@@ -1260,16 +1337,6 @@ body {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1
-  }
-  .card-service:hover .card-service__img {
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px)
-  }
-  .card-service:hover .card-service__shadow {
-    opacity: .2
-  }
-  .card-service:hover .card-service__btn {
-    background-color: var(--primary)
   }
   .burger__close:hover {
     color: var(--primary)
@@ -1333,16 +1400,6 @@ body {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1
-  }
-  .card-service:active .card-service__img {
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px)
-  }
-  .card-service:active .card-service__shadow {
-    opacity: .2
-  }
-  .card-service:active .card-service__btn {
-    background-color: var(--primary)
   }
   .burger__close:active {
     color: var(--primary)

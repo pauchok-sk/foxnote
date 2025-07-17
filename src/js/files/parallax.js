@@ -79,9 +79,9 @@ export default function parallax() {
       });
 
       // Очистка анимации при демонтировании
-      container.addEventListener("DOMNodeRemoved", () => {
-        if (animationId) cancelAnimationFrame(animationId);
-      });
+      // container.addEventListener("DOMNodeRemoved", () => {
+      //   if (animationId) cancelAnimationFrame(animationId);
+      // });
     });
   }
 }
