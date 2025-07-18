@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>pauchoo0k</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="./files/fancybox/fancybox.min.css?_v=20250719001350">
+	<link rel="stylesheet" href="./files/aos/aos.min.css?_v=20250719001350">
+	<link rel="stylesheet" href="./files/swiper/swiper.min.css?_v=20250719001350">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250719001350">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="body">
+	<header class="header">
+		<div class="container">
+			<div class="header__wrapper">
+				<a href="/" class="header__logo">
+					<img src="img/logo.svg" alt="logo" />
+				</a>
+				<ul class="list header__list">
+					<li><a href="#">Услуги</a></li>
+					<li><a href="#">Кейсы</a></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Контакты</a></li>
+					<li><a href="#" class="_active">Заполнить бриф</a></li>
+				</ul>
+				<a href="tel:+79995555555" class="header__tel">+7 (999) 555-55-55</a>
+				<button data-modal-btn="modal-price" class="btn-reset header__btn">Рассчитать стоимость</button>
+				<div class="header__burger-btn" id="burger-open">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="burger-overlay" id="burger-overlay"></div>
+
+	<div class="burger" id="burger">
+		<div class="burger__head">
+			<a href="/" class="burger__logo">
+				<img src="img/logo.svg" alt="logo" />
+			</a>
+			<div class="burger__close" id="burger-close">
+				<svg>
+					<use xlink:href="img/icons/icons.svg#icon-close"></use>
+				</svg>
+			</div>
+		</div>
+		<ul class="list burger__list">
+			<li><a href="#">Услуги</a></li>
+			<li><a href="#">Кейсы</a></li>
+			<li><a href="#">О нас</a></li>
+			<li><a href="#">Контакты</a></li>
+			<li><a href="#">Заполнить бриф</a></li>
+		</ul>
+		<a href="tel:+79995555555" class="burger__tel">+7 (999) 555-55-55</a>
+		<button data-modal-btn="modal-price" class="btn-reset burger__btn">
+			Рассчитать стоимость
+		</button>
+	</div>
+
+	<main>
+
+		<section class="s-archive-cases sect-p">
+			<div class="container">
+				<h1 class="s-title _center">
+					<span>События,</span>
+					которыми мы гордимся
+				</h1>
+				<div class="s-archive-cases__categories">
+					<a href="#" class="btn-outline">Лучшие проекты</a>
+					<a href="#" class="btn-outline _active">Тимбилдинги</a>
+					<a href="#" class="btn-outline">Деловые мероприятия</a>
+					<a href="#" class="btn-outline">Маркетинговые мероприятия</a>
+					<a href="#" class="btn-outline">Корпоративы</a>
+				</div>
+				<ul class="list s-archive-cases__subcategories">
+					<li><a href="#" class="_active">Приключенческий квест (19)</a></li>
+					<li><a href="#">Веревочный тимбилдинг (5)</a></li>
+					<li><a href="#">Выездной тимбилдинг (3)</a></li>
+					<li><a href="#">Творческий тимбилдинг (2)</a></li>
+				</ul>
+			</div>
+		</section>
+
+
+	</main>
+	<div class="modal-overlay" id="modal-overlay"></div>
+	<div class="modal" data-modal="modal-connect">
+		<div class="modal__window">
+			<div class="modal__close">
+				<svg>
+					<use xlink:href='img/icons/icons.svg#icon-close'></use>
+				</svg>
+			</div>
+			<div class="container">
+				<div class="modal__head">
+					<h3 class="modal__title">
+						Хотите заказать
+						<br />
+						организацию мероприятия?
+					</h3>
+					<p class="modal__head-content">
+						Если у вас есть бриф, вы можете его приложить к заявке
+						<br />
+						или 
+						<a href="#">заполнить его</a>
+						у нас на сайте
+					</p>
+				</div>
+				<form action="#" class="modal__form">
+					<div class="modal__form-grid">
+						<div class="input-control">
+							<label for="connect-name" class="label-control">
+								Имя
+								<span>*</span>
+							</label>
+							<input type="text" id="connect-name" class="input" />
+						</div>
+						<div class="input-control">
+							<label for="connect-tel" class="label-control">
+								Телефон
+								<span>*</span>
+							</label>
+							<input type="tel" id="connect-tel" class="input" />
+						</div>
+						<div class="input-control">
+							<label for="connect-comment" class="label-control">
+								Напишите про будущее мероприятие
+								<br />
+								<small>
+									(а если не хочется писать, то мы с вами свяжемся и обсудим)
+								</small>
+							</label>
+							<input type="text" id="connect-comment" class="input" />
+						</div>
+						<div class="modal__form-footer">
+							<input type="file" id="connect-file" class="input-file" />
+							<label data-change-text="Бриф прикреплён" for="connect-file" class="form-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-paper"></use>
+								</svg>
+								<span>Прикрепить бриф</span>
+							</label>
+							<a href="img/logo.svg" download class="form-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-download"></use>
+								</svg>
+								<span>Получить бриф</span>
+							</a>
+						</div>
+					</div>
+					<div class="modal__form-nav">
+						<button class="btn-s modal__form-btn">Отправить</button>
+						<p class="form-policy modal__form-policy">
+							Нажимая на кнопку, вы даете согласие на
+							<a href="#">обработку персональных данных</a>
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" data-modal="modal-price">
+		<div class="modal__window">
+			<div class="modal__close">
+				<svg>
+					<use xlink:href='img/icons/icons.svg#icon-close'></use>
+				</svg>
+			</div>
+			<div class="container">
+				<div class="modal__head">
+					<h3 class="modal__title">Рассчитать стоимость</h3>
+					<p class="modal__head-content">
+						Если у вас есть бриф, вы можете его приложить к заявке
+						<br />
+						или 
+						<a href="#">заполнить его</a>
+						у нас на сайте
+					</p>
+				</div>
+				<form action="#" class="modal__form">
+					<div class="modal__form-grid">
+						<div class="input-control">
+							<label for="price-name" class="label-control">
+								Имя
+								<span>*</span>
+							</label>
+							<input type="text" id="price-name" class="input" />
+						</div>
+						<div class="input-control">
+							<label for="price-tel" class="label-control">
+								Телефон
+								<span>*</span>
+							</label>
+							<input type="tel" id="price-tel" class="input" />
+						</div>
+						<div class="input-control">
+							<label for="price-comment" class="label-control">
+								Напишите про будущее мероприятие
+								<br />
+								<small>
+									(а если не хочется писать, то мы с вами свяжемся и обсудим)
+								</small>
+							</label>
+							<input type="text" id="price-comment" class="input" />
+						</div>
+						<div class="modal__form-footer">
+							<input type="file" id="price-file" class="input-file" />
+							<label data-change-text="Бриф прикреплён" for="price-file" class="form-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-paper"></use>
+								</svg>
+								<span>Прикрепить бриф</span>
+							</label>
+							<a href="img/logo.svg" download class="form-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-download"></use>
+								</svg>
+								<span>Получить бриф</span>
+							</a>
+						</div>
+					</div>
+					<div class="modal__form-nav">
+						<button class="btn-s modal__form-btn">Отправить</button>
+						<p class="form-policy modal__form-policy">
+							Нажимая на кнопку, вы даете согласие на
+							<a href="#">обработку персональных данных</a>
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" data-modal="modal-review">
+		<div class="modal__window">
+			<div class="modal__close">
+				<svg>
+					<use xlink:href='img/icons/icons.svg#icon-close'></use>
+				</svg>
+			</div>
+			<div class="container">
+				<div class="modal__head">
+					<h3 class="modal__title">Отзыв</h3>
+				</div>
+				<div id="content-review" class="modal__content"></div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer__wrapper">
+			<div class="container">
+				<div class="footer__main">
+					<a href="/" class="footer__logo">
+						<img src="img/logo.svg" alt="logo" />
+					</a>
+					<div class="footer__contacts">
+						<a href="tel:+79995555555" class="footer__tel">+7 (999) 555-55-55</a>
+						<ul class="list footer__contacts-list">
+							<li><a href="mailto:mail@domain.ru">mail@domain.ru</a></li>
+							<li>г. Казань, ул. Пушкина, д. 7</li>
+							<li>Пн-Пт: с 9:00-18:00, Сб: с 9:00-14:00</li>
+						</ul>
+						<div class="footer__social">
+							<a href="#" target="_blank" class="footer__social-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-wh"></use>
+								</svg>
+								<span>WhatsApp</span>
+							</a>
+							<a href="#" target="_blank" class="footer__social-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+								</svg>
+								<span>Telegram</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<nav class="footer__nav">
+					<div class="footer__nav-item">
+						<h5 class="footer__nav-title">Услуги</h5>
+						<ul class="list footer__list">
+							<li><a href="#">Корпоративные мероприятия</a></li>
+							<li><a href="#">Тимбилдинг</a></li>
+							<li><a href="#">Деловые мероприятия</a></li>
+							<li><a href="#">Маркетинговые мероприятия</a></li>
+						</ul>
+					</div>
+					<div class="footer__nav-item">
+						<h5 class="footer__nav-title">Проекты</h5>
+						<ul class="list footer__list">
+							<li><a href="#">Топ-проекты</a></li>
+							<li><a href="#">Тимбилдинги</a></li>
+							<li><a href="#">Маркетинговые мероприятия</a></li>
+						</ul>
+					</div>
+					<div class="footer__nav-item">
+						<h5 class="footer__nav-title">О компании</h5>
+						<ul class="list footer__list">
+							<li><a href="#">О нас</a></li>
+							<li><a href="#">Реквизиты</a></li>
+							<li><a href="#">Вакансии</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</footer>
+	<div class="footer-height"></div>
+
+	<script src="./files/fancybox/fancybox.min.js?_v=20250719001350"></script>
+	<script src="./files/swiper/swiper.min.js?_v=20250719001350"></script>
+	<script src="./files/aos/aos.min.js?_v=20250719001350"></script>
+
+	<script src="js/app.min.js?_v=20250719001350"></script>
+</body>
+
+</html>

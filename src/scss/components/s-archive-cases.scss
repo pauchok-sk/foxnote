@@ -1,0 +1,72 @@
+.s-archive-cases {
+  @include tablet {
+    overflow: hidden;
+  }
+  &__categories {
+    @include flex-center;
+    flex-wrap: wrap;
+    gap: 10px;
+    @include tablet {
+      flex-wrap: nowrap;
+      justify-content: start;
+      overflow-x: auto;
+      margin: 0 -15px;
+      padding: 0 15px;
+
+      .btn-outline {
+        flex-shrink: 0;
+        white-space: nowrap;
+      }
+    }
+  }
+  &__subcategories {
+    @include flex-center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 60px;
+    @include tablet {
+      flex-wrap: nowrap;
+      justify-content: start;
+      overflow-x: auto;
+      margin: 30px -15px 0 -15px;
+      padding: 0 15px;
+    }
+
+    a {
+      display: block;
+      position: relative;
+      font-weight: 300;
+      font-size: 20px;
+      padding-bottom: 10px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 100%;
+        height: 1px;
+        bottom: 0;
+        background-color: currentColor;
+        transition: right 0.3s ease;
+      }
+
+      @include hover {
+        &::before {
+          right: 0;
+        }
+      }
+      @include tablet {
+        flex-shrink: 0;
+        white-space: nowrap;
+      }
+
+      &._active {
+        font-weight: 500;
+
+        &::before {
+          right: 0;
+        }
+      }
+    }
+  }
+}
