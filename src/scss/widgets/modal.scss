@@ -6,7 +6,9 @@
   opacity: 0;
   visibility: hidden;
 
-  transition: opacity .4s ease, visibility .4s ease;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
 
   &._active {
     transform: translateY(0);
@@ -130,6 +132,29 @@
       font-size: 18px;
     }
 
+    a {
+      font-weight: 700;
+      color: var(--primary);
+
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__content {
+    font-weight: 300;
+    font-size: 20px;
+    flex: 0 1 640px;
+    @include laptop-min {
+      font-size: 18px;
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
     a {
       font-weight: 700;
       color: var(--primary);

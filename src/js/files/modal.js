@@ -35,12 +35,15 @@ export default function modal() {
         `.modal[data-modal="${modalId}"]`
       );
 
+      document.body.classList.add("body-hidden");
       currentModal.classList.add("_open");
       modalOverlay.classList.add("_active");
     }
 
     function closeModal(modalId) {
       let currentModal;
+
+      document.body.classList.remove("body-hidden");
 
       if (modalId) {
         currentModal = document.querySelector(

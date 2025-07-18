@@ -1,3 +1,7 @@
 .custom-cursor {
   cursor: url("@img/cursor.svg"), default;
+
+  &._black {
+    cursor: url("@img/cursor-black.svg"), default;
+  }
 }

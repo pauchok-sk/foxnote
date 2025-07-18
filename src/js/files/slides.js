@@ -17,4 +17,17 @@ export default function slides() {
       },
     });
   }
+
+  const reviewsSlider = document.querySelector(".s-reviews__slider");
+
+  if (reviewsSlider) {
+    const swiper = new Swiper(reviewsSlider, {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      speed: 800,
+      autoplay: {
+        delay: 3500,
+      },
+    });
+  }
 }

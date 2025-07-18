@@ -1,0 +1,60 @@
+.s-reviews {
+  &__slider {
+  }
+  &__slide {
+    width: 400px;
+    z-index: 1;
+    @include tablet {
+      width: 320px !important;
+    }
+
+    @include hover {
+      .s-reviews__slide-body {
+        svg {
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+  &__slide-img {
+    width: 100%;
+    display: block;
+  }
+  &__slide-body {
+    position: absolute;
+    inset: 0;
+    padding: 25px 45px;
+    z-index: 1;
+    @include tablet {
+      padding: 15px 30px;
+    }
+  }
+  &__slide-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    font-size: 16px;
+    color: #606060;
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+
+    div {
+      @include overflowText(3);
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--primary);
+
+      transition: transform .2s ease;
+    }
+  }
+}

@@ -47,6 +47,17 @@
             updateHeightBurger();
         }
     }
+    function footerScroll() {
+        const footer = document.querySelector(".footer");
+        if (footer) {
+            const footerHeight = document.querySelector(".footer-height");
+            heightFooterChange();
+            window.addEventListener("resize", heightFooterChange);
+            function heightFooterChange() {
+                footerHeight.style.height = footer.offsetHeight + "px";
+            }
+        }
+    }
     function headerScroll() {
         const header = document.querySelector(".header");
         if (header) {
@@ -100,11 +111,13 @@
             });
             function openModal(modalId) {
                 const currentModal = document.querySelector(`.modal[data-modal="${modalId}"]`);
+                document.body.classList.add("body-hidden");
                 currentModal.classList.add("_open");
                 modalOverlay.classList.add("_active");
             }
             function closeModal(modalId) {
                 let currentModal;
+                document.body.classList.remove("body-hidden");
                 if (modalId) currentModal = document.querySelector(`.modal[data-modal="${modalId}"]`); else currentModal = document.querySelector(".modal._open");
                 currentModal.classList.remove("_open");
                 modalOverlay.classList.remove("_active");
@@ -157,6 +170,17 @@
             });
         });
     }
+    function reviewCheck() {
+        const buttons = document.querySelectorAll("[data-modal-review]");
+        if (buttons.length) {
+            const modalContent = document.querySelector("#content-review");
+            buttons.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    modalContent.innerHTML = btn.dataset.modalReview;
+                });
+            });
+        }
+    }
     function slides() {
         const teamSlider = document.querySelector(".s-team__slider");
         if (teamSlider) {
@@ -172,6 +196,17 @@
                         slidesPerView: "auto",
                         spaceBetween: 40
                     }
+                }
+            });
+        }
+        const reviewsSlider = document.querySelector(".s-reviews__slider");
+        if (reviewsSlider) {
+            new Swiper(reviewsSlider, {
+                slidesPerView: "auto",
+                spaceBetween: 20,
+                speed: 800,
+                autoplay: {
+                    delay: 3500
                 }
             });
         }
@@ -374,6 +409,8 @@
     aosGradationCases();
     slides();
     headerScroll();
+    reviewCheck();
+    footerScroll();
     Fancybox.bind("[data-fancybox]");
     AOS.init();
 })();

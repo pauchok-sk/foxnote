@@ -27,6 +27,19 @@
   }
 }
 
+@mixin overflowText($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.3s ease;
+
+  &._open {
+    -webkit-line-clamp: unset;
+  }
+}
+
 @mixin first($num) {
   @if $num == 1 {
     &:first-child {

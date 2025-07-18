@@ -21,6 +21,10 @@
   @include tablet {
     padding: 65px 0px;
   }
+
+  &._gray {
+    background-color: #fafafa;
+  }
 }
 
 .s-gray {
