@@ -20,14 +20,22 @@ img {
 body {
   position: relative;
   font-family: "Manrope", sans-serif;
+  background-color: white;
   z-index: 1;
 }
 
-section {
+main {
   background-color: white;
+  border-radius: 0px 0px 60px 60px;
+  @media (max-width: 767px) {
+    border-radius: 0px 0px 40px 40px;
+  }
+}
+
+section {
   &:last-child {
     border-radius: 0px 0px 60px 60px;
-    @media (max-width: 767px) { 
+    @media (max-width: 767px) {
       border-radius: 0px 0px 40px 40px;
     }
   }

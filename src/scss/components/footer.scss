@@ -1,9 +1,9 @@
 .footer {
   position: fixed;
-  z-index: -1;
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: -1;
   &__wrapper {
     position: relative;
     overflow: hidden;
@@ -17,21 +17,22 @@
     @include tablet {
       padding: 50px 0px;
     }
-  }
-  &::before {
-    position: absolute;
-    content: "";
-    border-radius: 100%;
-    left: 50%;
-    bottom: 0;
-    width: 1680px;
-    max-width: 100%;
-    aspect-ratio: 1/0.25;
-    transform: translate(-50%, 50%);
-    opacity: 0.2;
-    background-color: #909fed;
-    filter: blur(300px);
-    z-index: -1;
+
+    &::before {
+      position: absolute;
+      content: "";
+      border-radius: 100%;
+      left: 50%;
+      bottom: 0;
+      width: 1680px;
+      max-width: 100%;
+      aspect-ratio: 1/0.25;
+      transform: translate(-50%, 50%);
+      opacity: 0.2;
+      background-color: #909fed;
+      filter: blur(300px);
+      z-index: -1;
+    }
   }
   &__wrapper {
     display: flex;
