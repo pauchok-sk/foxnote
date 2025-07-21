@@ -1,0 +1,105 @@
+.s-service-content {
+  &__head-content {
+    font-weight: 600;
+    font-size: 28px;
+    text-align: center;
+    margin: 0px 0px 120px 0px;
+    @include laptop-middle {
+      margin-bottom: 100px;
+    }
+    @include laptop-min {
+      margin-bottom: 80px;
+      font-size: 24px;
+    }
+    @include tablet {
+      margin-bottom: 60px;
+    }
+    @include tablet-min {
+      font-size: 18px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 40px;
+    @include laptop-middle {
+      flex-wrap: wrap;
+    }
+  }
+  &__content {
+    font-size: 20px;
+    flex: 0 1 760px;
+
+    @include laptop {
+      font-size: 18px;
+    }
+    @include laptop-middle {
+      flex: none;
+      width: 100%;
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__gallery {
+    @include flex-center;
+    position: relative;
+    width: 800px;
+    height: 540px;
+    flex-shrink: 0;
+
+    @include laptop {
+      width: 625px;
+      height: 420px;
+    }
+    @include laptop-middle {
+      width: 800px;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      aspect-ratio: 1/0.7;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__gallery-btn {
+    @include flex-center;
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background-color: var(--dark);
+    color: var(--primary);
+    border-radius: 50%;
+    transition:
+      color 0.4s ease-in-out,
+      background-color 0.4s ease-in-out;
+
+    @include hover {
+      color: var(--dark);
+      background-color: var(--primary);
+    }
+    @include tablet-min {
+      width: 100px;
+      height: 100px;
+    }
+
+    svg {
+      width: 40px;
+      height: 40px;
+      @include tablet-min {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}

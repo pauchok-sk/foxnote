@@ -1,0 +1,27 @@
+.s-adv {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+
+    font-size: 24px;
+    text-align: center;
+
+    
+  }
+  &__item-gallery {
+    position: relative;
+    display: flex;
+    align-items: center;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
