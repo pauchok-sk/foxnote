@@ -39,6 +39,12 @@
       background-color: var(--primary);
     }
   }
+  &._dark {
+    background-color: var(--dark);
+    @include hover {
+      background-color: var(--primary);
+    }
+  }
 }
 
 .btn-outline {

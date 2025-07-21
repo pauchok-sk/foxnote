@@ -1,0 +1,101 @@
+.intro-case {
+  position: relative;
+  padding: 175px 0px 60px 0px;
+  color: white;
+  min-height: 100vh;
+  z-index: 1;
+  @include laptop-middle {
+    padding-top: 130px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: black;
+    opacity: 0.5;
+    z-index: -1;
+  }
+
+  &__circle {
+    @include flex-center;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: white;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  &__body {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 130px;
+    @include laptop-middle {
+      margin-top: 50px;
+    }
+    @include laptop-min {
+      flex-wrap: wrap;
+    }
+  }
+  &__body-main {
+    flex: 0 1 1100px;
+    @include laptop-min {
+      flex: none;
+      width: 100%;
+    }
+  }
+  &__status {
+    font-size: 20px;
+    opacity: 0.7;
+    margin-bottom: 30px;
+  }
+  &__title {
+    margin-bottom: 30px !important;
+  }
+  &__content {
+    font-size: 28px;
+    margin: 0;
+    @include laptop-middle {
+      font-size: 24px;
+    }
+    @include laptop-min {
+      font-size: 20px;
+      line-height: 125%;
+    }
+  }
+  &__video-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+
+    font-size: 20px;
+    text-align: center;
+
+    @include hover {
+      div {
+        background-color: var(--primary);
+        color: var(--dark)
+      }
+    }
+    @include laptop-min {
+      margin: 0 auto;
+    }
+
+    div {
+      @include flex-center;
+      width: 200px;
+      height: 200px;
+      background-color: var(--dark);
+      color: var(--primary);
+      border-radius: 50%;
+      transition: color .2s ease, background-color .2s ease;
+    }
+    svg {
+      width: 55px;
+      height: 55px;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 export default function aosGradationCases() {
-  const aosContiners = document.querySelectorAll(".aos-container");
+  const aosContiners = document.querySelectorAll(".aos-cases");
 
   if (aosContiners.length && window.matchMedia("(min-width: 576px)").matches) {
     aosContiners.forEach((container) => {
