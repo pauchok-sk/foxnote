@@ -1,0 +1,14 @@
+.s-archive-services {
+  &__grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 130px;
+    @media (max-width: 1699px) {
+      gap: 50px;
+    }
+    @include laptop-middle {
+      gap: 30px;
+    }
+  }
+}
