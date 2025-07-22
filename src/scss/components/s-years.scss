@@ -1,0 +1,155 @@
+.s-years {
+  overflow: hidden;
+  &__wrapper {
+    display: flex;
+    gap: 120px;
+    @include laptop-min {
+      gap: 80px;
+    }
+    @include tablet {
+      gap: 40px;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-shrink: 0;
+    gap: 40px;
+    width: 1420px;
+    max-width: 100%;
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 25px;
+      align-items: start;
+      justify-content: start;
+    }
+  }
+  &__item-gallery {
+    position: relative;
+    width: 700px;
+    height: 500px;
+    flex-shrink: 0;
+    @include laptop {
+      width: 500px;
+      height: 360px;
+    }
+    @include laptop-min {
+      width: 375px;
+      height: 270px;
+    }
+    @include tablet-min {
+      width: 100%;
+      height: auto;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      border-radius: 0px 0px 250px 0px;
+      @include laptop-min {
+        border-radius: 0px 0px 100px 0px;
+      }
+      @include tablet-min {
+        height: auto;
+      }
+    }
+  }
+  &__item-num {
+    position: absolute;
+    right: -20px;
+    bottom: 0;
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--primary);
+    font-family: "NauryzRedKeds", sans-serif;
+
+    @include laptop {
+      font-size: 102px;
+      right: 0;
+    }
+    @include laptop-min {
+      font-size: 80px;
+    }
+    @include tablet-min {
+      font-size: 68px;
+    }
+  }
+  &__item-body {
+    flex: 0 1 600px;
+    @include tablet {
+      flex: none;
+      width: 100%;
+    }
+  }
+  &__item-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 110%;
+    text-transform: uppercase;
+    margin: 0px 0px 60px 0px;
+    @include laptop-middle {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+    @include laptop-min {
+      font-size: 24px;
+    }
+    @include tablet-min {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+  }
+  &__item-content {
+    font-size: 28px;
+    margin: 0;
+    @include laptop-middle {
+      font-size: 24px;
+    }
+    @include laptop-min {
+      font-size: 20px;
+    }
+    @include tablet-min {
+      font-size: 18px;
+    }
+  }
+  &__line {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 120px;
+    height: 3px;
+    width: 100%;
+    background-color: var(--primary);
+
+    @include laptop-min {
+      height: 2px;
+      margin-top: 80px;
+    }
+    @include tablet-min {
+      height: 1px;
+      margin-top: 40px;
+    }
+  }
+  &__line-star {
+    width: 50px;
+    position: absolute;
+    left: 30%;
+
+    @include laptop-min {
+      width: 40px;
+    }
+    @include tablet-min {
+      width: 35px;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}

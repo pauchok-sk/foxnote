@@ -194,7 +194,7 @@
             new Swiper(teamSlider, {
                 slidesPerView: "auto",
                 spaceBetween: 20,
-                speed: 800,
+                speed: 1600,
                 autolay: {
                     delay: 3500
                 },
@@ -211,9 +211,30 @@
             new Swiper(reviewsSlider, {
                 slidesPerView: "auto",
                 spaceBetween: 20,
-                speed: 800,
+                speed: 1600,
                 autoplay: {
                     delay: 3500
+                }
+            });
+        }
+        const gallerySlider = document.querySelector(".s-gallery-slider__slider");
+        if (gallerySlider) {
+            new Swiper(gallerySlider, {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                speed: 1600,
+                autoplay: {
+                    delay: 3500
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    },
+                    480: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    }
                 }
             });
         }
@@ -408,6 +429,64 @@
             });
         }
     }
+    function yearsScroll() {
+        const years = document.querySelector(".s-years");
+        if (years) {
+            gsap.registerPlugin(ScrollTrigger);
+            function setupYearsAnimation() {
+                const years = document.querySelector(".s-years");
+                if (!years) return;
+                const yearsContainer = years.querySelector(".container");
+                const yearsWrapper = years.querySelector(".s-years__wrapper");
+                const star = years.querySelector(".s-years__line-star");
+                const starWidth = star.clientWidth;
+                const childrens = yearsWrapper.children;
+                const childrensOffset = parseFloat(getComputedStyle(yearsWrapper).gap) || 0;
+                const wrapperWidth = Array.from(childrens).reduce((current, item) => current + item.offsetWidth, 0) + (childrens.length - 1) * childrensOffset;
+                const containerWidth = yearsContainer.offsetWidth;
+                const offsetLeftWrapper = Math.max(0, wrapperWidth - containerWidth + 40);
+                if (offsetLeftWrapper > 0) {
+                    const tl = gsap.timeline({
+                        defaults: {
+                            ease: "power1.inOut"
+                        }
+                    });
+                    tl.fromTo(yearsWrapper, {
+                        x: 0
+                    }, {
+                        x: -offsetLeftWrapper,
+                        ease: "power1.inOut"
+                    }, 0);
+                    if (star) tl.fromTo(star, {
+                        width: starWidth
+                    }, {
+                        rotation: 360,
+                        width: starWidth * 2,
+                        ease: "power1.out",
+                        transformOrigin: "center center"
+                    }, 0);
+                    ScrollTrigger.create({
+                        animation: tl,
+                        trigger: years,
+                        start: "bottom bottom",
+                        end: () => `+=${wrapperWidth * .7}`,
+                        scrub: 1.5,
+                        pin: true,
+                        invalidateOnRefresh: true,
+                        anticipatePin: 1,
+                        touch: {
+                            sensitivity: .5
+                        },
+                        onUpdate: self => {
+                            const progress = self.progress;
+                            if (progress > .3 && progress < .7) tl.timeScale(.8); else tl.timeScale(1);
+                        }
+                    });
+                }
+            }
+            setupYearsAnimation();
+        }
+    }
     spoller();
     burger();
     labelFile();
@@ -418,6 +497,7 @@
     headerScroll();
     reviewCheck();
     footerScroll();
+    yearsScroll();
     Fancybox.bind("[data-fancybox]");
     AOS.init();
 })();

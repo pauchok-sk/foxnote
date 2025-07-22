@@ -9,6 +9,7 @@ import parallax from "./files/parallax.js";
 import reviewCheck from "./files/reviewCheck.js";
 import slides from "./files/slides.js";
 import spoller from "./files/spoller.js";
+import yearsScroll from "./files/yearsScroll.js";
 
 spoller();
 burger();
@@ -20,6 +21,7 @@ slides();
 headerScroll();
 reviewCheck();
 footerScroll();
+yearsScroll();
 
 Fancybox.bind("[data-fancybox]");
 AOS.init();
