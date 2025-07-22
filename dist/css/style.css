@@ -331,7 +331,7 @@ section:last-child {
   width: 100%;
   background-color: rgba(0,0,0,0);
   font-size: 16px;
-  transition: border-color .2s ease
+  transition: border-color .6s ease
 }
 .input:focus {
   border-color: var(--primary)
@@ -350,7 +350,7 @@ section:last-child {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 20px;
-  transition: background-color .2s ease
+  transition: background-color .6s ease
 }
 .form-btn svg {
   width: 24px;
@@ -837,12 +837,12 @@ section:last-child {
 }
 .header__list a {
   font-size: 20px;
-  transition: color .2s ease
+  transition: color .6s ease
 }
 .header__tel {
   font-weight: 600;
   font-size: 24px;
-  transition: color .2s ease
+  transition: color .6s ease
 }
 .header__btn {
   padding: 20px;
@@ -850,7 +850,7 @@ section:last-child {
   font-weight: 700;
   font-size: 20px;
   color: #fff;
-  transition: color .2s ease
+  transition: color .6s ease
 }
 .header__burger-btn {
   cursor: pointer;
@@ -861,7 +861,7 @@ section:last-child {
   gap: 5px;
   width: 30px;
   height: 30px;
-  transition: color .2s ease
+  transition: color .6s ease
 }
 .header__burger-btn div {
   width: 100%;
@@ -1595,11 +1595,17 @@ section:last-child {
 .s-adv__item-gallery {
   position: relative;
   display: flex;
-  align-items: center
+  align-items: center;
+  z-index: 1
 }
-.s-adv__item-gallery img {
+.s-adv__item-icon {
   display: block;
   margin: 0 auto
+}
+.s-adv__item-arrow {
+  position: absolute;
+  right: -80px;
+  z-index: -1
 }
 .footer {
   position: fixed;
@@ -1665,7 +1671,7 @@ section:last-child {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 28px;
-  transition: color .2s ease
+  transition: color .6s ease
 }
 .footer__contacts-list {
   display: flex;
@@ -1675,7 +1681,7 @@ section:last-child {
   font-size: 20px
 }
 .footer__contacts-list a {
-  transition: color .2s ease
+  transition: color .6s ease
 }
 .footer__social {
   display: flex;
@@ -1691,7 +1697,7 @@ section:last-child {
   gap: 20px;
   flex: 1;
   font-size: 20px;
-  transition: color .2s ease
+  transition: color .6s ease
 }
 .footer__social-btn svg {
   width: 30px;
@@ -1716,7 +1722,7 @@ section:last-child {
   gap: 20px
 }
 .footer__list a {
-  transition: color .2s ease
+  transition: color .6s ease
 }
 .footer-height {
   position: relative;
@@ -1898,6 +1904,24 @@ section:last-child {
   }
   .s-services-rec__item {
     font-size: 24px
+  }
+  .s-adv__wrapper {
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 880px;
+    margin: 0 auto
+  }
+  .s-adv__item {
+    width: auto;
+    flex: 0 1 calc(50% - 15px)
+  }
+  .s-adv__item:nth-child(even) .s-adv__item-arrow {
+    display: none
+  }
+  .s-adv__item-arrow {
+    right: 0;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%)
   }
   .footer__nav {
     gap: 30px
@@ -2564,6 +2588,32 @@ section:last-child {
   }
   .s-services-rec__grid {
     grid-template-columns: 1fr
+  }
+  .s-adv__item {
+    position: relative;
+    font-size: 20px;
+    flex: none;
+    width: 100%;
+    transition-delay: 0s!important
+  }
+  .s-adv__item:nth-child(even) .s-adv__item-arrow {
+    display: block
+  }
+  .s-adv__item:not(:last-child) {
+    padding-bottom: 120px
+  }
+  .s-adv__item-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static
+  }
+  .s-adv__item-arrow {
+    right: auto;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    bottom: 15px;
+    max-width: 120px
   }
 }
 @media (max-width:480px) {
