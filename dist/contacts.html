@@ -66,132 +66,134 @@
 
 	<main>
 
-		<section class="s-archive-cases sect-p">
+		<section class="sect-p s-contacts">
 			<div class="container">
-				<h1 class="s-title _center">
-					<span>События,</span>
-					которыми мы гордимся
-				</h1>
-				<div class="s-archive-cases__categories">
-					<a href="#" class="btn-outline">Лучшие проекты</a>
-					<a href="#" class="btn-outline _active">Тимбилдинги</a>
-					<a href="#" class="btn-outline">Деловые мероприятия</a>
-					<a href="#" class="btn-outline">Маркетинговые мероприятия</a>
-					<a href="#" class="btn-outline">Корпоративы</a>
+				<h1 class="s-title _center">Контакты</h1>
+				<div class="s-contacts__grid aos-contacts">
+					<div data-aos-duration="600" data-aos="fade-up" class="s-contacts__item">
+						<h5 class="s-contacts__item-title">Для новых клиентов</h5>
+						<div class="s-contacts__item-body">
+							<a href="tel:+79995555555" class="s-contacts__tel">
+								+7 (999) 555-55-55
+							</a>
+							<a href="mailto:mail@domain.ru" class="s-contacts__mail">
+								mail@domain.ru
+							</a>
+							<ul class="list s-contacts__social">
+								<li><a href="#" target="_blank">WhatsApp</a></li>
+								<li><a href="#" target="_blank">Telegram</a></li>
+							</ul>
+						</div>
+					</div>
+					<div data-aos-duration="600" data-aos="fade-up" class="s-contacts__item">
+						<h5 class="s-contacts__item-title">Для партнеров</h5>
+						<div class="s-contacts__item-body">
+							<a href="tel:+79995555555" class="s-contacts__tel">
+								+7 (999) 555-55-55
+							</a>
+							<a href="mailto:mail@domain.ru" class="s-contacts__mail">
+								mail@domain.ru
+							</a>
+						</div>
+					</div>
+					<div data-aos-duration="600" data-aos="fade-up" class="s-contacts__item">
+						<h5 class="s-contacts__item-title">Для соискателей</h5>
+						<div class="s-contacts__item-body">
+							<a href="tel:+79995555555" class="s-contacts__tel">
+								+7 (999) 555-55-55
+							</a>
+							<a href="mailto:mail@domain.ru" class="s-contacts__mail">
+								mail@domain.ru
+							</a>
+						</div>
+					</div>
+					<div data-aos-duration="600" data-aos="fade-up" class="s-contacts__item">
+						<h5 class="s-contacts__item-title">График работы</h5>
+						<div class="s-contacts__item-body">
+							<p class="s-contacts__item-content">
+								Понедельник - пятница: 10:00 - 20:00
+								<br />
+								Суббота, воскресенье: выходной
+							</p>
+						</div>
+					</div>
+					<div data-aos-duration="600" data-aos="fade-up" class="s-contacts__item">
+						<h5 class="s-contacts__item-title">Адрес</h5>
+						<div class="s-contacts__item-body">
+							<p class="s-contacts__item-content">Казань, ул. Пушкина, д. 7</p>
+							<a href="#" target="_blank" class="s-contacts__item-link">
+								Показать на карте
+							</a>
+						</div>
+					</div>
+					<div data-aos-duration="600" data-aos="fade-up" class="s-contacts__item">
+						<h5 class="s-contacts__item-title">Карта партнера</h5>
+						<div class="s-contacts__item-body">
+							<p class="s-contacts__item-content">Казань, ул. Пушкина, д. 7</p>
+							<a href="img/adv-arrow-4.png" download class="btn-outline s-contacts__item-btn">
+								<span>Скачать</span>
+								<svg>
+									<use xlink:href='img/icons/icons.svg#icon-download'></use>
+								</svg>
+							</a>
+						</div>
+					</div>
 				</div>
-				<ul class="list s-archive-cases__subcategories">
-					<li><a href="#" class="_active">Приключенческий квест (19)</a></li>
-					<li><a href="#">Веревочный тимбилдинг (5)</a></li>
-					<li><a href="#">Выездной тимбилдинг (3)</a></li>
-					<li><a href="#">Творческий тимбилдинг (2)</a></li>
-				</ul>
-				<div class="s-archive-cases__grid aos-cases">
-					<a data-aos="fade-up" data-aos-duration="800" href="#" class="card-case" style="
-          background: url(&quot;img/case-2.jpg&quot;) 0 0 / cover no-repeat;
-        ">
-						<div class="card-case__body">
-							<div class="card-case__circle">
-								<img src="img/case-logo.jpg" alt="logo" />
-							</div>
-							<h5 class="card-case__title">Открытие сезона гольф клуба</h5>
-							<div class="card-case__type">Корпоративные игры</div>
+			</div>
+			<div class="s-contacts__map" data-center="[55.78680406893723,49.120966500000016]" data-zoom="17" id="map"></div>
+		</section>
+
+		<section class="s-connect sect-p _gray">
+			<div class="container">
+				<div class="s-connect__wrapper">
+					<div class="s-connect__body">
+						<img src="img/discuss.png" alt="image" class="s-connect__body-img">
+						<h2 class="s-connect__title">
+							Хотите заказать организацию мероприятия?
+						</h2>
+						<p class="s-connect__descr">
+							Если у вас есть бриф, вы можете его приложить к заявке или
+							<a href="#">заполнить его</a>
+							у нас на сайте
+						</p>
+					</div>
+					<form action="#" class="s-connect__form">
+						<div class="input-control">
+							<label for="s-connect-name" class="label-control">
+								Имя
+								<span>*</span>
+							</label>
+							<input type="text" id="s-connect-name" class="input" />
 						</div>
-					</a>
-					<a href="#" data-aos="fade-up" data-aos-duration="800" class="card-case" style="background: url(&quot;img/case.jpg&quot;) 0 0 / cover no-repeat">
-						<div class="card-case__body">
-							<div class="card-case__circle">
-								<img src="img/case-logo.jpg" alt="logo" />
-							</div>
-							<h5 class="card-case__title">Открытие сезона гольф клуба</h5>
-							<div class="card-case__type">Корпоративные игры</div>
+						<div class="input-control">
+							<label for="s-connect-tel" class="label-control">
+								Телефон
+								<span>*</span>
+							</label>
+							<input type="tel" id="s-connect-tel" class="input" />
 						</div>
-					</a>
-					<a href="#" data-aos="fade-up" data-aos-duration="800" class="card-case" style="
-          background: url(&quot;img/case-2.jpg&quot;) 0 0 / cover no-repeat;
-        ">
-						<div class="card-case__body">
-							<div class="card-case__circle">
-								<img src="img/case-logo.jpg" alt="logo" />
-							</div>
-							<h5 class="card-case__title">Открытие сезона гольф клуба</h5>
-							<div class="card-case__type">Корпоративные игры</div>
+						<div class="s-connect__form-footer">
+							<input type="file" id="s-connect-file" class="input-file" />
+							<label data-change-text="Бриф прикреплён" for="s-connect-file" class="form-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-paper"></use>
+								</svg>
+								<span>Прикрепить бриф</span>
+							</label>
+							<a href="img/logo.svg" download class="form-btn">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#icon-download"></use>
+								</svg>
+								<span>Получить бриф</span>
+							</a>
 						</div>
-					</a>
-					<a data-aos="fade-up" data-aos-duration="800" href="#" class="card-case" style="
-          background: url(&quot;img/case-2.jpg&quot;) 0 0 / cover no-repeat;
-        ">
-						<div class="card-case__body">
-							<div class="card-case__circle">
-								<img src="img/case-logo.jpg" alt="logo" />
-							</div>
-							<h5 class="card-case__title">Открытие сезона гольф клуба</h5>
-							<div class="card-case__type">Корпоративные игры</div>
-						</div>
-					</a>
-					<a href="#" data-aos="fade-up" data-aos-duration="800" class="card-case" style="background: url(&quot;img/case.jpg&quot;) 0 0 / cover no-repeat">
-						<div class="card-case__body">
-							<div class="card-case__circle">
-								<img src="img/case-logo.jpg" alt="logo" />
-							</div>
-							<h5 class="card-case__title">Открытие сезона гольф клуба</h5>
-							<div class="card-case__type">Корпоративные игры</div>
-						</div>
-					</a>
-					<a href="#" data-aos="fade-up" data-aos-duration="800" class="card-case" style="
-          background: url(&quot;img/case-2.jpg&quot;) 0 0 / cover no-repeat;
-        ">
-						<div class="card-case__body">
-							<div class="card-case__circle">
-								<img src="img/case-logo.jpg" alt="logo" />
-							</div>
-							<h5 class="card-case__title">Открытие сезона гольф клуба</h5>
-							<div class="card-case__type">Корпоративные игры</div>
-						</div>
-					</a>
-					<a data-aos="fade-up" data-aos-duration="800" href="#" class="card-case" style="
-          background: url(&quot;img/case-2.jpg&quot;) 0 0 / cover no-repeat;
-        ">
-						<div class="card-case__body">
-							<div class="card-case__circle">
-								<img src="img/case-logo.jpg" alt="logo" />
-							</div>
-							<h5 class="card-case__title">Открытие сезона гольф клуба</h5>
-							<div class="card-case__type">Корпоративные игры</div>
-						</div>
-					</a>
-					<a href="#" data-aos="fade-up" data-aos-duration="800" class="card-case" style="background: url(&quot;img/case.jpg&quot;) 0 0 / cover no-repeat">
-						<div class="card-case__body">
-							<div class="card-case__circle">
-								<img src="img/case-logo.jpg" alt="logo" />
-							</div>
-							<h5 class="card-case__title">Открытие сезона гольф клуба</h5>
-							<div class="card-case__type">Корпоративные игры</div>
-						</div>
-					</a>
-					<a href="#" data-aos="fade-up" data-aos-duration="800" class="card-case" style="
-          background: url(&quot;img/case-2.jpg&quot;) 0 0 / cover no-repeat;
-        ">
-						<div class="card-case__body">
-							<div class="card-case__circle">
-								<img src="img/case-logo.jpg" alt="logo" />
-							</div>
-							<h5 class="card-case__title">Открытие сезона гольф клуба</h5>
-							<div class="card-case__type">Корпоративные игры</div>
-						</div>
-					</a>
+						<button class="btn-s form-submit s-connect__form-btn">Отправить</button>
+						<p class="s-connect__form-policy">Нажимая на кнопку, вы даете согласие на <a href="#">обработку персональных данных</a></p>
+					</form>
 				</div>
-				<button class="btn-s s-archive-cases__btn-more">Показать еще</button>
 			</div>
 		</section>
 
-		<section data-modal-btn="modal-connect" class="s-discuss sect-p _gray">
-			<div class="container">
-				<div class="s-discuss__wrapper">
-					<div class="s-title">Обсудить проект</div>
-					<img src="img/discuss.png" alt="image" class="s-discuss__img">
-				</div>
-			</div>
-		</section>
 
 	</main>
 	<div class="modal-overlay" id="modal-overlay"></div>
@@ -429,6 +431,8 @@
 	<script src="./files/gsap/gsap.min.js?_v=20250722154138"></script>
 	<script src="./files/gsap/ScrollTrigger.min.js?_v=20250722154138"></script>
 
+
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU&_v=20250722154138" type="text/javascript"></script>
 	<script src="js/app.min.js?_v=20250722154138"></script>
 </body>
 

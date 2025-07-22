@@ -295,14 +295,19 @@ section:last-child {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  gap: 10px;
   font-weight: 500;
   font-size: 20px;
   color: var(--dark);
-  transition: color .2s ease,background-color .2s ease
+  transition: color .4s ease-in-out,background-color .4s ease-in-out
 }
 .btn-outline._active {
   color: #fff;
   background-color: var(--dark)
+}
+.btn-outline svg {
+  width: 24px;
+  height: 24px
 }
 .list {
   padding-left: 0;
@@ -1762,6 +1767,75 @@ section:last-child {
   transition: transform .6s ease-in-out;
   transition: transform .6s ease-in-out,-webkit-transform .6s ease-in-out
 }
+.s-contacts {
+  padding-bottom: 0!important
+}
+.s-contacts__grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+  row-gap: 60px
+}
+.s-contacts__item-title {
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(0,0,0,.5);
+  margin: 0 0 40px 0
+}
+.s-contacts__item-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px
+}
+.s-contacts__item-body a {
+  transition: color .4s ease-in-out,background-color .4s ease-in-out,border-color .4s ease-in-out
+}
+.s-contacts__tel {
+  display: block;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 110%;
+  text-transform: uppercase
+}
+.s-contacts__mail {
+  display: block;
+  font-size: 28px
+}
+.s-contacts__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px
+}
+.s-contacts__social li {
+  display: flex;
+  align-items: center;
+  font-size: 28px
+}
+.s-contacts__social li:not(:last-child)::after {
+  content: "|";
+  opacity: .1;
+  margin-top: 3px;
+  margin-left: 20px
+}
+.s-contacts__item-content {
+  font-size: 28px;
+  margin: 0;
+  text-align: center
+}
+.s-contacts__item-link {
+  font-size: 20px;
+  text-decoration: underline;
+  text-underline-offset: 3px
+}
+.s-contacts__map {
+  height: 600px;
+  margin-top: 60px
+}
 .footer {
   position: fixed;
   left: 0;
@@ -2250,6 +2324,18 @@ section:last-child {
   .s-years__item-content {
     font-size: 24px
   }
+  .s-contacts__tel {
+    font-size: 28px
+  }
+  .s-contacts__mail {
+    font-size: 24px
+  }
+  .s-contacts__social li {
+    font-size: 24px
+  }
+  .s-contacts__item-content {
+    font-size: 28px
+  }
   .footer__wrapper-inside {
     flex-wrap: wrap
   }
@@ -2513,6 +2599,15 @@ section:last-child {
   .s-years__line-star {
     width: 40px
   }
+  .s-contacts__grid {
+    grid-template-columns: repeat(2,1fr)
+  }
+  .s-contacts__item-title {
+    margin-bottom: 30px
+  }
+  .s-contacts__map {
+    height: 450px
+  }
   .footer__wrapper {
     padding-top: 60px
   }
@@ -2730,6 +2825,31 @@ section:last-child {
     flex: none;
     width: 100%
   }
+  .s-contacts__item-title {
+    font-size: 18px;
+    margin-bottom: 25px
+  }
+  .s-contacts__tel {
+    font-size: 24px
+  }
+  .s-contacts__mail {
+    font-size: 20px
+  }
+  .s-contacts__social {
+    gap: 10px
+  }
+  .s-contacts__social li {
+    font-size: 20px
+  }
+  .s-contacts__social li:not(:last-child)::after {
+    margin-left: 10px
+  }
+  .s-contacts__item-content {
+    font-size: 20px
+  }
+  .s-contacts__item-link {
+    font-size: 18px
+  }
   .footer__wrapper {
     padding: 50px 0
   }
@@ -2888,6 +3008,12 @@ section:last-child {
   .s-years__line-star {
     width: 35px
   }
+  .s-contacts__grid {
+    grid-template-columns: 1fr
+  }
+  .s-contacts__map {
+    height: 350px
+  }
 }
 @media (max-width:480px) {
   .s-partners__wrapper {
@@ -3013,6 +3139,9 @@ section:last-child {
     -webkit-transform: scale(1.07);
     transform: scale(1.07)
   }
+  .s-contacts__item-body a:hover {
+    color: var(--primary)
+  }
   .footer__tel:hover {
     color: var(--primary)
   }
@@ -3136,6 +3265,9 @@ section:last-child {
   .s-gallery-slider__slide:active img {
     -webkit-transform: scale(1.07);
     transform: scale(1.07)
+  }
+  .s-contacts__item-body a:active {
+    color: var(--primary)
   }
   .footer__tel:active {
     color: var(--primary)

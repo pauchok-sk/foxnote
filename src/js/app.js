@@ -1,9 +1,11 @@
 import "../scss/style.scss";
 import aosGradationCases from "./files/aosGradationCases.js";
+import aosGradationContacts from "./files/aosGradationContacts.js";
 import burger from "./files/burger.js";
 import footerScroll from "./files/footerScroll.js";
 import headerScroll from "./files/headerScroll.js";
 import labelFile from "./files/labelFile.js";
+import map from "./files/map.js";
 import modal from "./files/modal.js";
 import parallax from "./files/parallax.js";
 import reviewCheck from "./files/reviewCheck.js";
@@ -17,11 +19,13 @@ labelFile();
 modal();
 parallax();
 aosGradationCases();
+aosGradationContacts();
 slides();
 headerScroll();
 reviewCheck();
 footerScroll();
 yearsScroll();
+map();
 
 Fancybox.bind("[data-fancybox]");
 AOS.init();

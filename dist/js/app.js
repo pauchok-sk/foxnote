@@ -11,6 +11,18 @@
             });
         });
     }
+    function aosGradationContacts() {
+        const aosContiners = document.querySelectorAll(".aos-contacts");
+        if (aosContiners.length && window.matchMedia("(min-width: 576px)").matches) aosContiners.forEach(container => {
+            const aosItems = container.querySelectorAll("[data-aos]");
+            console.log(aosItems);
+            let delay = 100;
+            aosItems.forEach((item, index) => {
+                item.setAttribute("data-aos-delay", delay);
+                if (window.matchMedia("(max-width: 991px)").matches) if (delay === 200) delay = 100; else delay += 100; else if (delay === 300) delay = 100; else delay += 100;
+            });
+        });
+    }
     function burger() {
         const burgerOpen = document.querySelector("#burger-open");
         const burgerClose = document.querySelector("#burger-close");
@@ -94,6 +106,35 @@
                 if (e.target.files[0]) currentText.textContent = nextText;
             });
         });
+    }
+    function map() {
+        const contactsMap = document.querySelector("#map");
+        if (contactsMap) {
+            function init() {
+                const center = JSON.parse(contactsMap.dataset.center);
+                const zoom = Number(contactsMap.dataset.zoom);
+                const map = new ymaps.Map("map", {
+                    center,
+                    zoom
+                });
+                const placemark = new ymaps.Placemark(center, {}, {
+                    iconLayout: "default#image",
+                    iconImageHref: "./img/map-location.svg",
+                    iconImageSize: [ 36, 50 ],
+                    iconImageOffset: [ -15, -50 ]
+                });
+                map.controls.remove("geolocationControl");
+                map.controls.remove("searchControl");
+                map.controls.remove("trafficControl");
+                map.controls.remove("typeSelector");
+                map.controls.remove("fullscreenControl");
+                map.controls.remove("zoomControl");
+                map.controls.remove("rulerControl");
+                map.behaviors.disable([ "scrollZoom" ]);
+                map.geoObjects.add(placemark);
+            }
+            ymaps.ready(init);
+        }
     }
     function modal() {
         const buttons = document.querySelectorAll("[data-modal-btn]");
@@ -493,11 +534,13 @@
     modal();
     parallax();
     aosGradationCases();
+    aosGradationContacts();
     slides();
     headerScroll();
     reviewCheck();
     footerScroll();
     yearsScroll();
+    map();
     Fancybox.bind("[data-fancybox]");
     AOS.init();
 })();
