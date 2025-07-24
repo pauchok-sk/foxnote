@@ -2810,6 +2810,9 @@ section:last-child {
     padding: 0 15px
   }
   .s-archive-cases__subcategories a {
+    font-size: 16px
+  }
+  .s-archive-cases__subcategories a {
     flex-shrink: 0;
     white-space: nowrap
   }
