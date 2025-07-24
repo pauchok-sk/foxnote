@@ -42,9 +42,6 @@
     @include hover {
       margin: 0 30px;
     }
-    @include hover {
-      margin: 0 30px;
-    }
     @include laptop {
       width: 290px;
       height: 290px;
@@ -58,7 +55,7 @@
       }
     }
     @include tablet-min {
-      margin: 0;
+      margin: -30px 0px;
     }
   }
   &__circle-title {

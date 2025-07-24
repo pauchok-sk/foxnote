@@ -18,14 +18,34 @@
     }
 
     .s-title {
+      position: relative;
+      display: flex;
+      align-items: center;
       margin-bottom: 0;
+      z-index: 1;
+
+      @include tablet {
+        flex-direction: column;
+        gap: 30px;
+      }
     }
   }
   &__img {
+    position: absolute;
     display: block;
-    width: 285px;
+    width: 375px;
+    right: -270px;
+    z-index: -1;
+    @include laptop {
+      width: 300px;
+      right: -180px;
+    }
     @include laptop-min {
       width: 200px;
+      right: -120px;
+    }
+    @include tablet {
+      position: static;
     }
   }
 }

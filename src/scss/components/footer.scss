@@ -178,6 +178,50 @@
       }
     }
   }
+  &__bottom {
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 100px;
+
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.4);
+
+    @include laptop-middle {
+      margin-top: 80px;
+    }
+    @include laptop-min {
+      margin-top: 60px;
+    }
+    @include tablet {
+      margin-top: 40px;
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+
+    a {
+      transition: color 0.2s ease;
+      @include hover {
+        color: var(--primary);
+      }
+    }
+  }
+  &__bottom-list {
+    display: flex;
+    gap: 50px;
+    @include laptop-middle {
+      gap: 20px;
+    }
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+  &__dev {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
 }
 
 .footer-height {

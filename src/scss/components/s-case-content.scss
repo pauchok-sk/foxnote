@@ -73,6 +73,7 @@
   }
   &__item-content {
     font-size: 28px;
+    line-height: 135%;
     @include laptop {
       font-size: 24px;
     }
